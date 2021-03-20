@@ -1,0 +1,66 @@
+name: Python application
+
+# Run this workflow every time a new commit pushed to your repository
+on: [pull_request]
+
+jobs:
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  super-lint:
+    # Name the Job
+    name: Lint code base
+    # Set the type of machine to run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Runs the Super-Linter action
+      - name: Run Super-Linter
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+#jobs:
+#  build:
+#    env:
+#      PIPENV_NO_INHERIT: 1
+#      PIPENV_IGNORE_VIRTUALENVS: 1
+#    runs-on: ubuntu-latest
+#
+#    services:
+#      postgres:
+#        image: postgres:11.5
+#        env:
+#          POSTGRES_USER: postgres
+#          POSTGRES_PASSWORD: postgres
+#          POSTGRES_DB: postgres
+#        ports: ['5432:5432']
+#
+#    steps:
+#    - uses: actions/checkout@v2
+#    - name: Set up Python 3.8
+#      uses: actions/setup-python@v1
+#      with:
+#        python-version: 3.8
+#    - name: Copying configurations
+#      run: |
+#        cp contrib/env-sample .env
+#    - name: Install dependencies
+#      run: |
+#        pip install pipenv
+#        pipenv sync --dev
+#    - name: Lint with flake8
+#      run: |
+#        pipenv run flake8 .
+#    - name: Test with pytest
+#      run: |
+#        pipenv run pytest pythonpro --cov=pythonpro
+#    - name: Posting Coverage
+#      env:
+#        CODECOV_TOKEN: "a25e3e4c-71da-4e0c-9dd2-db308c481bb4"
+#      run: |
+#        pipenv run codecov
