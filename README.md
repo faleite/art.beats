@@ -1,4 +1,4 @@
-# art.beats
+# art.beats Website
 Website sobre trilhas sonoras do tipo Beats
 
 Aplicação disponível em https://fabeats.herokuapp.com/
