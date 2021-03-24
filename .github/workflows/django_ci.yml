@@ -10,14 +10,14 @@ jobs:
       PIPENV_IGNORE_VIRTUALENVS: 1
     runs-on: ubuntu-latest
 
-#    services:
-#      postgres:
-#        image: postgres:11.5
-#        env:
-#          POSTGRES_USER: postgres
-#          POSTGRES_PASSWORD: postgres
-#          POSTGRES_DB: postgres
-#        ports: ['5432:5432']
+    services:
+      postgres:
+        image: postgres:11.5
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports: ['5432:5432']
 
     steps:
     - uses: actions/checkout@v2
