@@ -3,7 +3,7 @@ name: Python application
 # Run this workflow every time a new commit pushed to your repository
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review, unlabeled, closed]
+  push:
     branches:
       - main
 
