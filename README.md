@@ -1,7 +1,7 @@
 # art.beats Website
 Website sobre trilhas sonoras do tipo Beats
 
-Aplicação disponível em https://fabeats.herokuapp.com/
+Aplicação disponível em https://beats.faleite.art
 
 Código desenvolvido em Django
 
