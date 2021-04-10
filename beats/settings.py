@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'beats.base',
+    'beats.sounds',
 ]
 
 MIDDLEWARE = [
