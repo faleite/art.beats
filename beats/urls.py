@@ -21,6 +21,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('beats.base.urls')),
+    path('', include('beats.sounds.urls')),
 ]
 
 if settings.DEBUG:
