@@ -1,8 +1,8 @@
 from django.urls import path
 
-from beats.sounds.views import sounds
+from beats.sounds.views import sound
 
 app_name = 'sounds'
 urlpatterns = [
-    path('<slug:slug>', sounds, name='sounds'),
+    path('sounds', sound, name='sounds'),
 ]
