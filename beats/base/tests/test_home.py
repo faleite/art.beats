@@ -18,5 +18,9 @@ def test_title(resp):
     assert_contains(resp, '<title>Musicas sem direitos autorais | FaBeats</title>')
 
 
-def test_home(resp):
+def test_home_link(resp):
     assert_contains(resp, f'href="{reverse("base:home")}">FaBeats</a>')
+
+
+def test_email_link(resp):
+    assert_contains(resp, 'href="mailto:fabricio_2310@hotmail.com"')
