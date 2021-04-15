@@ -36,28 +36,6 @@
 
 {% block body %}{% endblock body %}
 
-<footer class="main-footer mt-5 pt-2">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h3>Entre em Contato</h3>
-				<address>
-					<a href="tel:+351935118601">+351 935-118-601</a>
-					<br/>
-				<a href="mailto:fabricio_2310@hotmail.com">fabricio_2310@hotmail.com</a>
-			<div/>
-		</div>
-	</div>
-	<div class="container mb-5">
-		<div class="row">
-			<div class="col">
-			{% now 'Y' %} Fabeats. Todos direitos reservados.
-			<div/>
-
-		</div>
-	</div>
-
-<footer/>
-
+{% include 'base/footer.html' with contato_email='fabricio_2310@hotmail.com' only %}
 </body>
 </html>
